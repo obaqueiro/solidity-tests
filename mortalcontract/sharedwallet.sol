@@ -26,7 +26,7 @@ contract SharedWallet is MortalContract {
       }
   }
   
-  function getCurrentAmount() public onlyOwner returns (uint) {
+  function getCurrentAmount() public view onlyOwner returns (uint) {
     return this.balance;    
   }
   
