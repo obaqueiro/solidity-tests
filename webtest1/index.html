@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>TestDapp</title>
+		<script type="text/javascript">
+
+		window.addEventListener('load', function() {
+
+	  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+	  if (typeof web3 !== 'undefined') {
+	    // Use Mist/MetaMask's provider
+	    web3js = new Web3(web3.currentProvider);
+	  } else {
+	    console.log('No web3? You should consider trying MetaMask!')
+	    // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+	    web3js = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+	  }
+	});
+
+			function getBalance() {
+				 web3.eth.getBalance(web3.eth.accounts[0], function(error, result) {
+					 if (error) { console.error(error);}
+				   else { document.getElementById("balance").innerText = web3.fromWei(result); }
+				 });
+				 }
+		</script>
+	</head>
+
+	<body>
+		<h1>Web3 Provider: <span id="providerStatus"></span>
+		<h1>Ether Balance:</h1>
+		<span id="balance"></span> in Ether
+		<button onclick="getBalance()">Update Balance</button>
+	</body>
+
+	<script type="text/x-ecmascript">
+	  document.getElementById("providerStatus").innerText =
+		  (typeof web3 !== 'undefined') ? "OK" : "Not Found!";
+	</script>
+</html>
