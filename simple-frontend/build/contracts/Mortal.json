@@ -1,0 +1,247 @@
+{
+  "contractName": "Mortal",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610112806100536000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806341c0e1b5146044575b600080fd5b3415604e57600080fd5b60546056565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141560e4576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b5600a165627a7a72305820422b8485a36f812863c334c52c3c176d43bcdfafde604435610da1be7210ab8a0029",
+  "deployedBytecode": "0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806341c0e1b5146044575b600080fd5b3415604e57600080fd5b60546056565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141560e4576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b5600a165627a7a72305820422b8485a36f812863c334c52c3c176d43bcdfafde604435610da1be7210ab8a0029",
+  "sourceMap": "52:100:0:-;;;189:10:2;181:5;;:18;;;;;;;;;;;;;;;;;;52:100:0;;;;;;",
+  "deployedSourceMap": "52:100:0:-;;;;;;;;;;;;;;;;;;;;;;;;84:65;;;;;;;;;;;;;;;114:5:2;;;;;;;;;;;100:19;;:10;:19;;;96:43;;;137:5:0;;;;;;;;;;;124:19;;;96:43:2;84:65:0:o",
+  "source": "pragma solidity ^0.4.0;\r\n\r\nimport \"./Owned.sol\";\r\n\r\ncontract Mortal is Owned {\r\n\r\n  function kill() only_owner public{\r\n    selfdestruct(owner);\r\n  }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Omar\\ether\\simple-frontend\\contracts\\Mortal.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/Users/Omar/ether/simple-frontend/contracts/Mortal.sol",
+      "exportedSymbols": {
+        "Mortal": [
+          15
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 193,
+          "absolutePath": "/C/Users/Omar/ether/simple-frontend/contracts/Owned.sol",
+          "file": "./Owned.sol",
+          "scope": 16,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2,
+        "name": "ImportDirective",
+        "src": "27:21:0"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            192
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            15,
+            192
+          ],
+          "name": "Mortal",
+          "scope": 16
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Owned",
+                  "referencedDeclaration": 192,
+                  "type": "contract Owned"
+                },
+                "id": 3,
+                "name": "UserDefinedTypeName",
+                "src": "71:5:0"
+              }
+            ],
+            "id": 4,
+            "name": "InheritanceSpecifier",
+            "src": "71:5:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "kill",
+              "payable": false,
+              "scope": 15,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5,
+                "name": "ParameterList",
+                "src": "97:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 8,
+                "name": "ParameterList",
+                "src": "117:0:0"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 182,
+                      "type": "modifier ()",
+                      "value": "only_owner"
+                    },
+                    "id": 6,
+                    "name": "Identifier",
+                    "src": "100:10:0"
+                  }
+                ],
+                "id": 7,
+                "name": "ModifierInvocation",
+                "src": "100:10:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 210,
+                              "type": "function (address)",
+                              "value": "selfdestruct"
+                            },
+                            "id": 9,
+                            "name": "Identifier",
+                            "src": "124:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 172,
+                              "type": "address",
+                              "value": "owner"
+                            },
+                            "id": 10,
+                            "name": "Identifier",
+                            "src": "137:5:0"
+                          }
+                        ],
+                        "id": 11,
+                        "name": "FunctionCall",
+                        "src": "124:19:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "ExpressionStatement",
+                    "src": "124:19:0"
+                  }
+                ],
+                "id": 13,
+                "name": "Block",
+                "src": "117:32:0"
+              }
+            ],
+            "id": 14,
+            "name": "FunctionDefinition",
+            "src": "84:65:0"
+          }
+        ],
+        "id": 15,
+        "name": "ContractDefinition",
+        "src": "52:100:0"
+      }
+    ],
+    "id": 16,
+    "name": "SourceUnit",
+    "src": "0:154:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-02-24T00:09:47.425Z"
+}
